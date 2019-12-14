@@ -34,8 +34,7 @@ class Recommender:
             top of the recommendations for user with given tags
         """
 
-        cv = CountVectorizer()  # Приводит тэги к векторному виду(по количеству отедльных тэгов)
-
+        cv = CountVectorizer()
         user_events_matrix = cv.fit_transform(
             self.df_events['tags'].append(pd.Series(tags), ignore_index=True)
         )
